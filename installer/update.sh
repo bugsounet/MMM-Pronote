@@ -24,25 +24,20 @@ Installer_info "Welcome to MMM-Pronote updater !"
 echo
 
 cd ~/MagicMirror/modules/MMM-Pronote
-# deleting package.json because npm install add/update package
-rm -f package.json package-lock.json
+rm -f package-lock.json
 
-Installer_info "Updating..."
+Installer_info "Updating to Release..."
 
 git reset --hard HEAD
 git pull
-#fresh package.json
-git checkout package.json
-cd ~/MagicMirror/modules/MMM-Pronote/node_modules
+git checkout -f prod
+git pull
 
 echo
-Installer_info "Deleting ALL @bugsounet libraries..."
-
-rm -rf @bugsounet
-cd ~/MagicMirror/modules/MMM-Pronote
-
+Installer_info "Deleting ALL libraries for clean install..."
+rm -rf node_modules
 echo
-Installer_info "Ready for Installing..."
+Installer_info "Ready for Installing the Release..."
 
 # launch installer
 npm install
