@@ -131,9 +131,19 @@
   padding: 5px 10px 5px 25px;
 }
 
+.PRONOTE_DELAYS_DONE,
+.PRONOTE_ABSENCES_DONE,
 .PRONOTE_HOMEWORKS_DONE {
   width:30px;
   text-align: center;
+  color: green;
+}
+
+.PRONOTE_DELAYS_NOTDONE,
+.PRONOTE_ABSENCES_NOTDONE {
+  width:30px;
+  text-align: center;
+  color: red;
 }
 
 .PRONOTE_HOMEWORKS_VALUES {

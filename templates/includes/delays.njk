@@ -6,6 +6,11 @@
       {% for delays in userData.delays %}
           {% if count < config.Delays.number %}
               <div class="PRONOTE_DETAIL">
+                  {% if delays.justified %}
+                    <div class="PRONOTE_DELAYS_DONE">✓</div>
+                  {%else %}
+                    <div class="PRONOTE_DELAYS_NOTDONE">⁉️</div>
+                  {% endif %}
                   <div class="PRONOTE_HOURS">
                       Le {{ delays.localizedDate }} ({{ delays.minutesMissed }} Minutes)
                   </div>

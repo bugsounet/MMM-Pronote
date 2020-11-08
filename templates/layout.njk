@@ -22,9 +22,7 @@
             {% if userData.timetableOfTheDay|length > 0 %}
               {% ifAsync config.Timetables.displayActual %}
                   <div id="PRONOTE_TIMETABLE_DAY">
-                      <div class="PRONOTE_TEXT_UNDERLINE">
-                              Prochains cours
-                      </div>
+                      <div class="PRONOTE_TEXT_UNDERLINE">Prochains cours</div>
                       {% set timetable = userData.timetableOfTheDay %}
                       {% include 'templates/includes/timetable.njk' %}
                   </div>
@@ -32,7 +30,7 @@
             {% else %}
               {% ifAsync config.Timetables.displayNextDay %}
                   <div id="PRONOTE_TIMETABLE_NEXT">
-                      {% if userData.isHolidays.active %}
+                      {% ifAsync userData.isHolidays.active %}
                         <div class="PRONOTE_TEXT_UNDERLINE">{{ userData.isHolidays.name }}</div>
                       {% else %}
                         <div class="PRONOTE_TEXT_UNDERLINE">{{ userData.timetableOfNextDay.timetableDay }}</div>
@@ -44,9 +42,7 @@
             {% endif %}
             {% ifAsync not config.Timetables.displayNextDay and userData.timetableOfTheDay|length == 0 %}
                   <div id="PRONOTE_TIMETABLE_DAY">
-                      <div class="PRONOTE_TEXT_UNDERLINE">
-                              Plus de cours aujourd'hui !
-                      </div>
+                      <div class="PRONOTE_TEXT_UNDERLINE">Plus de cours aujourd'hui !</div>
                   </div>
             {% endif %}
         </div>

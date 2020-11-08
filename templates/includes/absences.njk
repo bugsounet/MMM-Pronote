@@ -6,6 +6,11 @@
       {% for absences in userData.absences %}
           {% if count < config.Absences.number %}
               <div class="PRONOTE_DETAIL">
+                  {% if absences.justified %}
+                    <div class="PRONOTE_ABSENCES_DONE">✓</div>
+                  {%else %}
+                    <div class="PRONOTE_ABSENCES_NOTDONE">⁉️</div>
+                  {% endif %}
                   <div class="PRONOTE_HOURS">
                       {% if absences.oneDay %}
                         Le {{ absences.day }} de {{ absences.fromHour }} à {{ absences.toHour }}

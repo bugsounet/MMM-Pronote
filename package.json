@@ -25,6 +25,7 @@
   "homepage": "https://github.com/delphiki/MMM-Pronote#readme",
   "dependencies": {
     "@bugsounet/npmcheck": "^0.9.9",
-    "@bugsounet/pronote-api": "^1.0.0"
+    "@bugsounet/pronote-api": "^1.0.0",
+    "wget-improved": "^3.2.1"
   }
 }

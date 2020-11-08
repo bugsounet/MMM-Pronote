@@ -9,7 +9,7 @@
       {% for homework in userData.homeworks %}
           {% if homeworkDate !== homework.formattedFor %}
               <div class="PRONOTE_HOMEWORKS_DATE">
-                  <span>pour {{ homework.formattedFor }}</span>
+                  <span>Pour {{ homework.formattedFor }}</span>
               </div>
               {% set homeworkDate = homework.formattedFor %}
           {% endif %}

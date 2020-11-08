@@ -1,12 +1,12 @@
 <div id="PRONOTE_AVERAGES">
     {% if config.Averages.displayStudent %}
         <div class="PRONOTE_AV_STUDENT">
-            Moyenne générale: <span class="highlight">{{ userData.marks.averages.student.toFixed(2) }}</span>
+            Moyenne générale : <span class="highlight">{{ userData.marks.averages.student.toFixed(2) }}</span>
         </div>
     {% endif %}
     {% if config.Averages.displayClass %}
         <div class="PRONOTE_AV_CLASS">
-            Moyenne de la classe: {{ userData.marks.averages.studentClass.toFixed(2) }}
+            Moyenne de la classe : {{ userData.marks.averages.studentClass.toFixed(2) }}
         </div>
     {% endif %}
 </div>
